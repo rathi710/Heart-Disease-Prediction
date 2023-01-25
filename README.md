@@ -12,7 +12,6 @@ patients that are at risk of getting a heart disease or not and also this method
 This project uses Flask API to deploy the model and build the web application.
 
 
-
 ## Installation 
 
 All libraries are available in Anaconda distribution of Python.
@@ -47,7 +46,7 @@ The dataset has 14 attributes:
 	- `index.html`: a web page that contains a form for heart disease testing. 
   - `result.html`: a web page that shows the result based on inputs.
 	
-<h3>Libraries Used</h3>
+## Libraries Used
 1. Flask<br>
 2. Numpy<br>
 3. Pandas<br>
@@ -59,7 +58,7 @@ The dataset has 14 attributes:
 9. CSS<br>
 10. Bootstrap<br><hr>
 
-##Machine Learning algorithms used:
+## Machine Learning algorithms used:
 
 1. Logistic Regression (Scikit-learn)
 2. Support Vector Machine (Linear) (Scikit-learn)
@@ -72,12 +71,11 @@ Accuracy achieved: 86% (Logistic Regression)
 
 
 
-##Accuracies and Confusion matrices<br>
+## Accuracies and Confusion matrices<br>
 
+![Screenshot 2023-01-25 214125](https://user-images.githubusercontent.com/85077087/214615819-d503f33a-a860-4c02-aacc-216fddd230a8.png)
 
-![image](https://user-images.githubusercontent.com/13360641/111072795-290bcc80-8502-11eb-8074-d72eab648850.png)
-
-![image](https://user-images.githubusercontent.com/13360641/111072851-6b350e00-8502-11eb-85f7-215d9acc71d5.png)
+![Screenshot 2023-01-25 214216](https://user-images.githubusercontent.com/85077087/214615933-f4153401-aaef-4c99-b266-ac6b2f3506d1.png)
 
 <hr>
 
