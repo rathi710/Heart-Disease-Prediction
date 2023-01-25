@@ -41,6 +41,22 @@
           </div>
           <div class="col-lg-6 col-md-6 col-12">
             <form action="{{ url_for('predict')}}" method="post">
+
+              
+              <div class="form-group">
+                <label for="age">Age</label>
+                <input class="form-control" type="text" id="age" name="age" placeholder="Your age..">
+              </div>
+              34,0,1,118,210,0,1,192,0,0.7,2,0,2,1
+              <div class="form-group">
+                <label for="sex">Sex</label>
+                <select class="form-control" id="sex" name="sex">
+                  <option selected>----select option----</option>
+                  <option value="1">Male</option>
+                  <option value="0">Female</option>
+                </select>
+              </div>
+
               <div class="form-group">
                 <label for="cp">Chest Pain Type</label>
                 <select class="form-control" id="cp" name = "cp" required="required" placeholder="Chest Pain Type">
@@ -91,6 +107,37 @@
                   <option value="0">No</option>
                 </select>
               </div>
+
+              <div class="form-group">
+                <label for="oldpeak">ST depression</label>
+                <input class="form-control" id="oldpeak" name="oldpeak" placeholder="ST depression, typically in [0-6.2]">
+              </div>
+
+              <div class="form-group">
+                <label for="slope">slope of the peak exercise ST segment</label>
+                <select class="form-control" id="slope" name="slope">
+                  <option selected>----select option----</option>
+                  <option value="0">Upsloping</option>
+                  <option value="1">Flat</option>
+                  <option value="2">Downsloping</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="ca">Number of Major vessels</label>
+                <input class="form-control" type="text" id="ca" name="ca" placeholder="Typically in [0-4]">
+              </div>
+
+              <div class="form-group">
+                <label for="thal">Thalassemia</label> 
+                <select class="form-control" id="thal" name="thal">
+                  <option selected>----select option----</option>
+                  <option value="0">Normal</option>
+                  <option value="1">Fixed Defect</option> 
+                  <option value="2">Reversible Defect</option>  
+                </select>
+              </div>
+
               <button type="submit" class="btn btn-danger">Predict</button>
             </form>
           </div>

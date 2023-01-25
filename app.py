@@ -1,38 +1,41 @@
-from flask import Flask, render_template, url_for, flash, redirect
+from flask import Flask, render_template, request
 import joblib
-from flask import request
-import numpy as np
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
+def home():
+    return render_template('index.html')
 
-@app.route("/Heart")
-def cancer():
-    return render_template("index.html")
 
-def ValuePredictor(to_predict_list, size):
-    to_predict = np.array(to_predict_list).reshape(1,size)
-    if(size==7): 
-        loaded_model = joblib.load('model_joblib_heart')
-        result = loaded_model.predict(to_predict)
-    return result[0]
-
-@app.route('/predict', methods = ["POST"])
+@app.route("/predict", methods=['POST'])
 def predict():
-    if request.method == "POST":
-        to_predict_list = request.form.to_dict()
-        to_predict_list = list(to_predict_list.values())
-        to_predict_list = list(map(float, to_predict_list))
-         
-        if(len(to_predict_list)==7):
-            result = ValuePredictor(to_predict_list,7)
-    
-    if(int(result)==1):
-        prediction = "Sorry you have chances of getting the disease. Please consult the doctor immediately"
-    else:
-        prediction = "No need to fear. You have no dangerous symptoms of the disease"
-    return(render_template("result.html", prediction_text=prediction))       
+    if request.method == 'POST':
+        age = float(request.form['age'])
+        sex = float(request.form['sex'])
+        cp = float(request.form['cp'])
+        trestbps = float(request.form['trestbps'])
+        chol = float(request.form['chol'])
+        fbs= float(request.form['fbs'])
+        restecg = float(request.form['restecg'])
+        thalach = float(request.form['thalach'])
+        exang = float(request.form['exang'])
+        oldpeak = float(request.form['oldpeak'])
+        slope = float(request.form['slope'])
+        ca = float(request.form['ca'])
+        thal = float(request.form['thal'])
 
-if __name__ == "__main__":
+        pred_args = [age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
+
+        mul_reg = open('heart_model.pkl','rb')
+        ml_model = joblib.load(mul_reg)
+        model_predcition = ml_model.predict([pred_args])
+        if model_predcition == 1:
+            res = 'Sorry you have chances of getting the disease. Please consult the doctor immediately'
+        else:
+            res = 'No need to fear. You have no dangerous symptoms of the disease'
+        #return res
+    return render_template('result.html', prediction_text = res)
+
+if __name__ == '__main__':
     app.run(debug=True)
