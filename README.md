@@ -38,7 +38,7 @@ The dataset has 14 attributes:
 
 ## File Descriptions 
 
-- `data.csv`: the dataset file.
+- `heart.csv`: the dataset file.
 - `Heart_Disease_Prediction.ipynb`: contains the code of data exploration, preparation and modeling. 
 - `heart_model.pkl`: the classification model. 
 - `app.py`: Flask API that bind between the classification model and the web page. 
@@ -74,6 +74,7 @@ Accuracy achieved: 86% (Logistic Regression)
 ## Accuracies and Confusion matrices<br>
 
 ![Screenshot 2023-01-25 214125](https://user-images.githubusercontent.com/85077087/214615819-d503f33a-a860-4c02-aacc-216fddd230a8.png)
+
 
 ![Screenshot 2023-01-25 214216](https://user-images.githubusercontent.com/85077087/214615933-f4153401-aaef-4c99-b266-ac6b2f3506d1.png)
 
