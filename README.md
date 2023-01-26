@@ -5,13 +5,13 @@ The objective of this project is to check whether the patient is likely to be di
 cardiovascular heart diseases based on their medical attributes such as gender, age, chest pain, fasting sugar
 level, etc. A dataset is selected with patient’s medical history and attributes. By
 using this dataset, we predict whether the patient can have a heart disease or not. To predict this, we use 14
-medical attributes of a patient and classify him if the patient is likely to have a heart disease. These medical
+medical attributes of a patient and classify him if the patient is likely to have a heart disease. <br>These medical
 attributes are trained under various algorithms like Logistic regression, KNN and Random Forest Classifier, etc. Most
 efficient of these algorithms is Logistic Regression which gives us the accuracy of 86%.
 This project uses Flask API to deploy the model and build the web application.
 
-## A Demo of Web App
-https://user-images.githubusercontent.com/85077087/214850124-e4f41b1a-9d6a-4f62-90a8-536c02436342.mp4
+## A Demo of the Web App
+![Heart-disease-Prediction-Google](https://user-images.githubusercontent.com/85077087/214869465-ccfcb1bc-6b54-443e-bba3-eef120076225.gif)
 
 
 ## Installation 
