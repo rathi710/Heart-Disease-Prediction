@@ -7,9 +7,11 @@ level, etc. A dataset is selected with patient’s medical history and attribute
 using this dataset, we predict whether the patient can have a heart disease or not. To predict this, we use 14
 medical attributes of a patient and classify him if the patient is likely to have a heart disease. These medical
 attributes are trained under various algorithms like Logistic regression, KNN and Random Forest Classifier, etc. Most
-efficient of these algorithms is Logistic Regression which gives us the accuracy of 86%. And, finally we classify
-patients that are at risk of getting a heart disease or not and also this method is totally cost efficient.
+efficient of these algorithms is Logistic Regression which gives us the accuracy of 86%.
 This project uses Flask API to deploy the model and build the web application.
+
+## A Demo of Web App
+https://user-images.githubusercontent.com/85077087/214850124-e4f41b1a-9d6a-4f62-90a8-536c02436342.mp4
 
 
 ## Installation 
